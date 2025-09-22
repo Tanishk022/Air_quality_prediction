@@ -5,7 +5,12 @@ import numpy as np
 # Load trained model
 model = pickle.load(open("regression_model.pkl", "rb"))
 
-st.title("Air Quality Prediction App")
+# st.title("Air Quality Prediction App")
+col1,col2 = st.columns([2,2])
+with col1:
+    st.image("https://medicaldialogues.in/wp-content/uploads/2016/11/AIR-POLLUTION.jpg")
+with col2:
+    st.title("Air Quality Prediction App")
 
 # User inputs
 T = st.number_input("Enter Temperature (°C)", min_value=0.0, step=0.1)
@@ -34,6 +39,7 @@ if st.button("Predict Air Quality"):
         st.error("😷 Very Unhealthy – Everyone may experience health effects, avoid outdoor activities.")
     else:
         st.error("☠️ Hazardous – Serious health risks, stay indoors and avoid exposure.")
+
 
 
 
