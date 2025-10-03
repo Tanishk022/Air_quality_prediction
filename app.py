@@ -48,8 +48,8 @@ import numpy as np
 
 # Load trained model
 model = pickle.load(open("regression_model_2.pkl", "rb"))
-if st.button("Information about AQI Range"):
-        st.image("Screenshot 2025-10-03 113142.png")
+# if st.button("Information about AQI Range"):
+st.image("Screenshot 2025-10-03 113142.png")
 col1,col2 = st.columns([2,2])
 with col1:
     st.image("https://medicaldialogues.in/wp-content/uploads/2016/11/AIR-POLLUTION.jpg")
@@ -103,6 +103,7 @@ if st.button("Predict Air Quality"):
     else:
         st.write("Hazardous")
         st.error("– Serious health risks, stay indoors and avoid exposure.]")
+
 
 
 
